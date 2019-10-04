@@ -19,7 +19,7 @@ class Minicursos(models.Model):
     horarios = models.CharField(max_length=255, blank=False, null=False)
     total_vagas = models.IntegerField()
     vagas_disponiveis = models.IntegerField(default=0)
-    observacoes = models.TextField()
+    observacoes = models.TextField(blank=True)
 
     def __str__(self):
         return self.nome

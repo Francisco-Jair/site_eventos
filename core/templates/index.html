@@ -533,7 +533,7 @@
                 <h6 class="card-price text-center">R$ 30,00</h6>
                 <hr>
                 <div class="text-center">
-                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="standard-access">Inscreva-se</button>
+                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="standard-access" onclick="verificarHorarios()">Inscreva-se</button>
                 </div>
               </div>
             </div>
@@ -545,7 +545,7 @@
                 <h6 class="card-price text-center">R$ 60,00</h6>
                 <hr>
                 <div class="text-center">
-                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="pro-access">Inscreva-se</button>
+                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="pro-access" onclick="verificarHorarios()">Inscreva-se</button>
                 </div>
               </div>
             </div>
@@ -604,6 +604,7 @@
             </div>
             <div class="modal-body">
               <form method="POST" action="inscricao">
+                {% csrf_token %}
                 <div class="form-group">
                   <input type="text" class="form-control" name="nome" placeholder="Nome">
                 </div>
@@ -629,7 +630,7 @@
                   <soan>Minicursos</span>
                   {% for minicurso in minicursos %}
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="{{ minicurso.nome }}" onclick="verificarHorarios()">
+                      <input type="checkbox" class="form-check-input" id="{{ minicurso.nome }}" name="cursos" value="{{ minicurso.nome }}" onclick="verificarHorarios()">
                       <label class="form-check-label" for="{{ minicurso.nome }}">{{ minicurso.nome }}</label>
                       <br>
                       <small id="{{ minicurso.dias }};{{ minicurso.horarios }}">Dias: {{ minicurso.dias }}; Horários: {{ minicurso.horarios }}</small>
@@ -720,6 +721,12 @@
   <script>
     function verificarHorarios() {
       let caixas = Object.values(document.getElementsByClassName('form-check-input'));
+
+      caixas.map((caixa) => {
+        if(caixa.disabled) {
+          caixa.disabled = false;
+        }
+      });
 
       caixas.map((caixa) => {
         if(caixa.checked) {

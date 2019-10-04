@@ -1,9 +1,10 @@
-from django.shortcuts import render, redirect
-from .models import Palestrantes, Minicursos
+from django.shortcuts import render, redirect, HttpResponse
+from django.views.decorators.csrf import csrf_protect
+from .models import Palestrantes, Minicursos, Usuarios
 
 def index(request):
     palestrantes = Palestrantes.objects.all()
-    minicursos = Minicursos.objects.exclude(vagas_disponiveis = 0)
+    minicursos = Minicursos.objects.exclude(vagas_disponiveis=0)
 
     dados = {'palestrantes': palestrantes, 'minicursos': minicursos}
 
@@ -20,6 +21,24 @@ def detalhes_palestrante(request):
     except:
         return redirect('')
 
-# def inscricao(request):
-    # if request.method == 'POST':
+@csrf_protect
+def inscricao(request):
+    try:
+        if request.method == 'POST':
+            usuario = Usuarios.objects.create(nome = request.POST['nome'], 
+                instituicao = request.POST['instituicao'], 
+                email = request.POST['email'],
+                cpf = request.POST['cpf'], 
+                tipo_usuario = request.POST['tipo-usuario'])
+
+            for curso in dict(request.POST)['cursos']:
+                c = Minicursos.objects.filter(nome=curso).first()
+                usuario.minicurso.add(Minicursos.objects.get(nome=curso))
+                c.vagas_disponiveis -= 1
+                c.save()
+
+            usuario.save()
+            return HttpResponse('OK')
+    except:
+        return HttpResponse('Não foi possível concluir sua inscrição. Por favor, tente novamente.')
 

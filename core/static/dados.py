@@ -33,3 +33,8 @@ Minicursos.objects.create(nome = 'Oficina: Noções básicas para criação de f
 Minicursos.objects.create(nome = 'Mini curso: Workshop de desenho de moda.', responsavel = 'Facilitadora: Olivia Matos', dias = '12,13', horarios = '14-18', total_vagas = 15, vagas_disponiveis = 15, observacoes = '*Material de desenho e papel A4')
 Minicursos.objects.create(nome = 'Mini curso: Modelagem de  BODY SHORT.', responsavel = 'Prof. Esp. Antônio Pinto', dias = '14', horarios = '9-12,14-18', total_vagas = 12, vagas_disponiveis = 12, observacoes = '*Material necessário: 3 metros de papel kraft, Lápis 2B, Borracha branca, Tesoura para papel, Fita Métrica, Régua de Alfaiates, Fita adesiva (gomada), 1 metro de algodãozinho e Agulha de costura a mão')
 Minicursos.objects.create(nome = 'Consultoria de imagem e coloração pessoal.', responsavel = 'Facilitadora: prof.ª Me. Juliana Pessoa.', dias = '14', horarios = '14-18', total_vagas = 10, vagas_disponiveis = 10, observacoes = '')
+
+# 2e3192
+# 8a3795
+# b7b1ef
+# 7c92f8
