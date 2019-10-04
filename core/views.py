@@ -25,6 +25,9 @@ def detalhes_palestrante(request):
 def inscricao(request):
     try:
         if request.method == 'POST':
+            palestrantes = Palestrantes.objects.all()
+            minicursos = Minicursos.objects.exclude(vagas_disponiveis=0)
+            
             usuario = Usuarios.objects.create(nome = request.POST['nome'], 
                 instituicao = request.POST['instituicao'], 
                 email = request.POST['email'],
@@ -32,13 +35,18 @@ def inscricao(request):
                 tipo_usuario = request.POST['tipo-usuario'])
 
             for curso in dict(request.POST)['cursos']:
-                c = Minicursos.objects.filter(nome=curso).first()
+                c = Minicursos.objects.get(nome=curso)
                 usuario.minicurso.add(Minicursos.objects.get(nome=curso))
                 c.vagas_disponiveis -= 1
                 c.save()
 
             usuario.save()
-            return HttpResponse('OK')
+
+            dados = {'palestrantes': palestrantes, 'minicursos': minicursos, 'mensagem': 'Usuário cadastrado com sucesso.'}
+
+            return render(request, 'index.html', dados)
     except:
-        return HttpResponse('Não foi possível concluir sua inscrição. Por favor, tente novamente.')
+        dados = {'palestrantes': palestrantes, 'minicursos': minicursos, 'mensagem': 'Não foi possível concluir sua inscrição. Por favor, tente novamente.'}
+
+        return render(request, 'index.html', dados)
 

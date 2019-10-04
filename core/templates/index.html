@@ -4,12 +4,18 @@
 
 {% block content %}
 
+  {% if mensagem is not None %}
+  <script>
+    alert("{{mensagem}}")
+  </script>
+  {% endif %}
+
   <!--==========================
     Intro Section
   ============================-->
   <section id="intro">
     <div class="intro-container wow fadeIn">
-      <h1 class="mb-4 pb-0">Semana de Estudos em Moda e Design <br><span>SEMD</span></h1>
+      <h1 class="mb-4 pb-0">III Semana de Estudos em Moda e Design <br><span>III SEMD</span></h1>
       <p class="mb-4 pb-0">De 11 a 14 de Novembro, Prédio da Moda, Universidade Federal do Piauí</p>
       <a href="#about" class="about-btn scrollto">Sobre o Evento</a>
     </div>
@@ -38,9 +44,9 @@
           </div>
           <div class="col-lg-6">
             <h3>COORDENAÇÃO DO EVENTO</h3>
-            <p>Prof. Me. Ascanio Wanderley Abrantes de Carvalho</p>
+            <p>Prof. Me. Ascânio Wanderley Abrantes de Carvalho</p>
             <p>Prof.ª Me. Fca. Danielle Araújo de Souza</p>
-            <p>Prof.ª Me. Nubia de Andrade Viana</p>
+            <p>Prof.ª Me. Núbia de Andrade Viana</p>
           </div>
         </div>
         <br>
@@ -73,15 +79,15 @@
               <div class="col">
                 <p>Dra. Aliana Barbosa Aires</p>
                 <p>Dra. Artemísia Lima Caldas</p>
-                <p>Me. Ascanio Wanderley Abrantes de Carvalho</p>
-                <p>Me. Cicero de Brito Nogueira</p>
+                <p>Me. Ascânio Wanderley Abrantes de Carvalho</p>
+                <p>Me. Cícero de Brito Nogueira</p>
                 <p>Me. Fca Danielle Araújo de Souza</p>
                 <p>Me. Gizela Costa Falcão</p>
               </div>
               <div class="col">
                 <p>Dr. Jefferson Mendes de Souza</p>
                 <p>Me. Maria de Jesus Farias Medeiros</p>
-                <p>Me. Nubia Andrade Viana</p>
+                <p>Me. Núbia Andrade Viana</p>
                 <p>Me. Simone Ferreira de Albuquerque</p>
               </div>
           </div>
@@ -129,7 +135,6 @@
       <div class="container wow fadeInUp">
         <div class="section-header">
           <h2>Programação</h2>
-          <p>Here is our event schedule</p>
         </div>
 
         <ul class="nav nav-tabs" role="tablist">
@@ -143,12 +148,9 @@
             <a class="nav-link" href="#day-3" role="tab" data-toggle="tab">Quarta, 13</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#day-4" role="tab" data-toggle="tab">Quinta, 14</a>
+            <a class="nav-link mt-2" href="#day-4" role="tab" data-toggle="tab">Quinta, 14</a>
           </li>
         </ul>
-
-        <h3 class="sub-heading">Voluptatem nulla veniam soluta et corrupti consequatur neque eveniet officia. Eius
-          necessitatibus voluptatem quis labore perspiciatis quia.</h3>
 
         <div class="tab-content row justify-content-center">
 
@@ -194,16 +196,18 @@
             <div class="row schedule-item">
               <div class="col-md-2"><time>09:00 às 12:00</time></div>
               <div class="col-md-10">
+                <h4>Credenciamento</h4>
+                <br>
                 <h4>1. Mini curso: Artesanato, processo criativo e design: questões sociológicas</h4>
                 <p>Profª Dra. Maria Dione Carvalho de Morais e Ms. Carol Barbosa</p>
                 <p>Vagas: 20</p>
                 <br>
                 <h4>2. Mini curso: Design de calçados.</h4>
-                <p>Facilitador: profº Dr. Clecio Lacerda.</p>
+                <p>Profº Dr. Clecio Lacerda.</p>
                 <p>Vagas: 15</p>
                 <br>
                 <h4>3. Mini curso: “A Moda como Campo do Conhecimento”</h4>
-                <p>Facilitador: profº Dr. Tarcisio D’Almeida</p>
+                <p>Profº Dr. Tarcisio D’Almeida</p>
                 <p>Vagas: 40</p>
               </div>
             </div>
@@ -220,7 +224,7 @@
                 <p>Horário: 14:00</p>
                 <br>
                 <h4>2 – De gorda a Plus Size: a moda do tamanho. grande.</h4>
-                <p>Profª Drª Aliana Aires.</p>
+                <p>Profª Dra. Aliana Aires.</p>
                 <p>Horário: 14:00</p>
                 <br>
                 <h4>3 -  Planejamento de carreira na área de moda.</h4>
@@ -230,7 +234,7 @@
                 <h4>Mini curso:</h4>
                 <br>
                 <h4>1. Workshop de desenho de moda.</h4>
-                <p>Facilitadora: Olivia Matos</p>
+                <p>Olivia Matos</p>
                 <p>Vagas: 15</p>
                 <p>Horário:14:00 as 18:00</p>
               </div>
@@ -261,19 +265,20 @@
                 <h4>Credenciamento</h4>
                 <br>
                 <h4>1. Crochet Transcendental</h4>
+                <p>Lise Mariane.</p>
                 <p>A partir das 9:00</p>
                 <p>Livre</p>
                 <br>
                 <h4>2. Mini curso: Artesanato, processo criativo e design: questões sociológicas</h4>
-                <p>Profª Dra. Maria Dione Carvalho de Morais e Ms. Carol Barbosa</p>
+                <p>Profª Dra. Maria Dione Carvalho de Morais e Me. Carol Barbosa</p>
                 <p>Vagas: 20</p>
                 <br>
-                <h4>3. Mini Curso: Conservação preventiva de têxteis. </h4>
-                <p>Profº Me. Ascanio Wanderley</p>
+                <h4>3. Mini Curso: Conservação preventiva de têxteis.</h4>
+                <p>Profº Me. Ascânio Wanderley</p>
                 <p>Vagas 15 </p>
                 <br>
                 <h4>4. Mini Curso: Design de calçados.</h4>
-                <p>Facilitador: profº Dr. Clécio Lacerda.</p>
+                <p>Profº Dr. Clécio Lacerda.</p>
                 <p>Vagas: 15 </p>
               </div>
             </div>
@@ -286,7 +291,7 @@
                 <h4>Conferências:</h4>
                 <br>
                 <h4>1. Calça jeans feminina: expressão estética da moda popular brasileira.</h4>
-                <p>Profª MA. Iara Braga</p>
+                <p>Profª Me. Iara Braga</p>
                 <p>Horário - 14:00</p>
                 <br>
                 <h4>2 - Percurso metodológico de uma pesquisa sobre adequação de vestuário para idosas dependentes.</h4>
@@ -298,12 +303,12 @@
                 <p>Horário: 16:00</p>
                 <br>
                 <h4>Oficina: Noções básicas para criação de figurino.</h4>
-                <p>Facilitadora: Profª Esp. Katia Ferraz</p>
+                <p>Profª Esp. Katia Ferraz</p>
                 <p>Vagas: 15</p>
                 <p>Horário: 14:00 às 18:00</p>
                 <br>
                 <h4>Mini curso: 1. Workshop de desenho de moda.</h4>
-                <p>Facilitadora: Olivia Matos</p>
+                <p>Olivia Matos</p>
                 <p>Vagas: 15</p>
                 <p>Horário:14:00 às 18:00</p>
               </div>
@@ -332,6 +337,7 @@
               <div class="col-md-2"><time>09:00 às 12:00</time></div>
               <div class="col-md-10">
                 <h4>1. Crochet Transcendental</h4>
+                <p>Lise Mariane.</p>
                 <p>A partir das 9:00</p>
                 <p>Livre</p>
                 <br>
@@ -341,12 +347,12 @@
                 <p>Horário: 9:00 às 12:00</p>
                 <br>
                 <h4>3. Mini curso: Design de calçados.</h4>
-                <p>Facilitador: profº Dr. Clecio Lacerda.</p>
+                <p>Profº Dr. Clecio Lacerda.</p>
                 <p>Vagas: 15</p>
                 <p>Horário: 9:00 às 12:00</p>
                 <br>
                 <h4>4. Palestra: Mitos e verdades sobre a formação em design de moda.</h4>
-                <p>Facilitadoras: Sarah de Paula e Glay Glenda.</p>
+                <p>Sarah de Paula e Glay Glenda.</p>
                 <p>Horário: 10:00</p>
               </div>
             </div>
@@ -361,11 +367,11 @@
                 <p>Horário - 14:00</p>
                 <br>
                 <h4>2. Patrimônio e sua interface com a moda.</h4>
-                <p>Profª Gizela Facão</p>
+                <p>Profª Me. Gizela Falcão</p>
                 <p>Horário: 16:00</p>
                 <br>
                 <h4>3 – Fashion Revolucion – Por uma moda ética e transparente.</h4>
-                <p>Prof.  esp. Manuel Teles</p>
+                <p>Prof. Esp. Manuel Teles</p>
                 <p>Horário: 16:00</p>
                 <br>
                 <h4>Mini cursos:</h4>
@@ -376,7 +382,7 @@
                 <p>Horário: 14:00 às 18:00</p>
                 <br>
                 <h4>2. Consultoria de imagem e coloração pessoal.</h4>
-                <p>Facilitadora: profª Ma. Juliana Pessoa.</p>
+                <p>Profª Me. Juliana Pessoa.</p>
                 <p>Vagas: 10.</p>
                 <p>Horário: 14:00 às 18:00</p>
               </div>
@@ -388,7 +394,7 @@
                 <h4>MESA DE ENCERRAMENTO DO EVENTO.</h4>
                 <p>TEMA: Design Inclusivo</p>
                 <p>PARTICIPANTES: Prof. Esp. Antônio Pinto E Profº Dr. Clécio Lacerda</p>
-                <p>Mediadora: Profª MSc. Maria de Jesus Farias</p>
+                <p>Mediadora: Profª Me. Maria de Jesus Farias</p>
                 <br>
                 <h4>Encerramento</h4>
               </div>
@@ -420,9 +426,9 @@
               <div style="text-align: center">
                 <span>NORMAS PARA SUBMISSÃO DE TRABALHOS:</span>
                 <br>
-                <a href="">FORMATAÇÃO DA ORGANIZAÇÃO DO ARTIGO.</a>
+                <a href="https://drive.google.com/file/d/1EyHs0TUGNIo5g02n7DzuC_1Io7U2E8sh/view?usp=sharing" target="_blank">FORMATAÇÃO DA ORGANIZAÇÃO DO ARTIGO</a>
                 <br>
-                <a href="">MODELO E NORMAS DO ARTIGO</a>
+                <a href="https://drive.google.com/file/d/13_pK2KwdjQiH8-cQ9mN_knIFBshtjgLH/view?usp=sharing" target="_blank">MODELO E NORMAS DO ARTIGO</a>
               </div>
               <br>
               <br>
@@ -454,7 +460,7 @@
                       E-mail: modapatrimoniocultgt2@gmail.com
                     </p>
                     <p>
-                      Coordenadores: Profº Me. Ascanio Wanderley Abrantes de Carvalho e Profª Me. Gizela Costa Falcão de Carvalho. 
+                      Coordenadores: Profº Me. Ascânio Wanderley Abrantes de Carvalho e Profª Me. Gizela Costa Falcão de Carvalho. 
                     </p>
                   </div>
                 </li>
@@ -469,7 +475,7 @@
                       E-mail: modacriacaosustentabilidadegt3@gmail.com
                     </p>
                     <p>
-                      Coordenadores: Dr. Jefferson Mendes de Souza e profª Me. Simone Ferreira de Albuquerque.
+                      Coordenadores: Profº. Dr. Jefferson Mendes de Souza e Profª Me. Simone Ferreira de Albuquerque.
                     </p>
                   </div>
                 </li>
@@ -500,7 +506,7 @@
                       E-mail: modafigurinogt5@gmail.com                        
                     </p>
                     <p>
-                      Coordenadores: Me. Cícero de Brito Nogueira e Me. Núbia de Andrade Viana.                        
+                      Coordenadores: Profº. Me. Cícero de Brito Nogueira e Profª. Me. Núbia de Andrade Viana.                        
                     </p>
                   </div>
                 </li>
@@ -520,9 +526,10 @@
       <div class="container">
 
         <div class="section-header">
-          <h2>Incrição</h2>
+          <h2>Inscrição</h2>
           <p>Prazo de inscrições: 01/10/2019 a 08/11/2019</p>
           <p>Para se inscrever escolha uma das opções abaixo e preencha o formulário.</p>
+          <p>Quando as vagas dos mini cursos e oficinas forem preenchidas não será mais possível inscrever-se.</p>
         </div>
 
         <div class="row">
@@ -559,7 +566,7 @@
         <div class="section-header">
           <h2>Pagamento</h2>
           <p>Após a inscrição o pagamento pode ser feito por meio dos métodos a seguir.</p>
-          <p>O comprovante de pagamento deve ser enviado para o e-mail: modejunior01@gmail.com.</p>
+          <p>O comprovante de pagamento deve ser enviado para o e-mail: <a href="mailto:modejunior01@gmail.com">modejunior01@gmail.com</a>.</p>
         </div>
 
         <div class="row">
@@ -572,7 +579,7 @@
                   <li>Agência: 1122-3</li>
                   <li>Conta: 21205-9</li>
                   <li>Variação:51</li>
-                  <li>Conta poupança em nome de Lara Beatriz Neiva</li>
+                  <li>Conta poupança em nome de Lara Beatriz de Azevêdo Neiva</li>
                 </ul>
               </div>
             </div>
@@ -606,24 +613,24 @@
               <form method="POST" action="inscricao">
                 {% csrf_token %}
                 <div class="form-group">
-                  <input type="text" class="form-control" name="nome" placeholder="Nome">
+                  <input type="text" class="form-control" name="nome" placeholder="Nome" required>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" name="instituicao" placeholder="Instituição">
+                  <input type="text" class="form-control" name="instituicao" placeholder="Instituição" required>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" name="email" placeholder="E-mail">
+                  <input type="text" class="form-control" name="email" placeholder="E-mail" required>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" name="cpf" placeholder="CPF">
+                  <input type="text" class="form-control" name="cpf" placeholder="CPF" required>
                 </div>
                 <div class="form-group">
-                  <select id="tipo-usuario" name="tipo-usuario" class="form-control" >
+                  <select id="tipo-usuario" name="tipo-usuario" class="form-control" required>
                     <option value="">Tipo de Usuário</option>
-                    <option value="estudante-graduacao">Estudante Graduação</option>
-                    <option value="estudante-pos-graduacao">Estudante de Pós-Gradução</option>
-                    <option value="docente">Docente</option>
-                    <option value="outros-profissionais">Outros Profissionais</option>
+                    <option value="Estudante Graduação">Estudante Graduação</option>
+                    <option value="Estudante de Pós-Gradução">Estudante de Pós-Gradução</option>
+                    <option value="Docente">Docente</option>
+                    <option value="Outros Profissionais">Outros Profissionais</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -633,7 +640,7 @@
                       <input type="checkbox" class="form-check-input" id="{{ minicurso.nome }}" name="cursos" value="{{ minicurso.nome }}" onclick="verificarHorarios()">
                       <label class="form-check-label" for="{{ minicurso.nome }}">{{ minicurso.nome }}</label>
                       <br>
-                      <small id="{{ minicurso.dias }};{{ minicurso.horarios }}">Dias: {{ minicurso.dias }}; Horários: {{ minicurso.horarios }}</small>
+                      <small id="{{ minicurso.dias }};{{ minicurso.horarios }}">Dias: {{ minicurso.dias }}; Horários: {{ minicurso.horarios }}; Vagas Disponíveis: {{ minicurso.vagas_disponiveis }}</small>
                     </div>
                   {% endfor %}
                 </div>
@@ -669,11 +676,19 @@
             </div>
           </div>
 
-          <div class="col-md-4">
+          <!-- <div class="col-md-4">
             <div class="contact-phone">
               <i class="ion-ios-telephone-outline"></i>
               <h3>Telefone</h3>
               <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
+            </div>
+          </div> -->
+          
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="ion-ios-telephone-outline"></i>
+              <h3>Redes Sociais</h3>
+              <a href="https://www.instagram.com/modejr/" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
             </div>
           </div>
 
