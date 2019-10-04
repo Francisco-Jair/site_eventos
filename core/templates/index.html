@@ -4,34 +4,6 @@
 
 {% block content %}
 
-<body>
-
-  <!--==========================
-    Header
-  ============================-->
-  <header id="header">
-    <div class="container">
-
-      <div id="logo" class="pull-left">
-        <!-- Uncomment below if you prefer to use a text logo -->
-        <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
-        <a href="#intro" class="scrollto"><img src="img/logo.png" alt="" title=""></a>
-      </div>
-
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li class="menu-active"><a href="#intro">Início</a></li>
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#speakers">Palestrantes</a></li>
-          <li><a href="#schedule">Programação</a></li>
-          <li><a href="#faq">Trabalhos</a></li>
-          <li><a href="#contact">Contato</a></li>
-          <li class="buy-tickets"><a href="#buy-tickets">Inscrição</a></li>
-        </ul>
-      </nav><!-- #nav-menu-container -->
-    </div>
-  </header><!-- #header -->
-
   <!--==========================
     Intro Section
   ============================-->
@@ -126,23 +98,26 @@
           <h2>Palestrantes e Convidados</h2>
         </div>
 
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker">
-              <img src="{% static 'img/speakers/1.jpg' %}" alt="Speaker 1" class="img-fluid">
-              <div class="details">
-                <h3><a href="speaker-details.html">Brenden Legros</a></h3>
-                <p>Quas alias incidunt</p>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
+          <div class="row">
+              {% for palestrante in palestrantes %}
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img src="{% static palestrante.imagem %}" alt="{{ palestrante.nome }}" class="img-fluid" style="height: 100%; width: 100%; object-fit: contain">
+                <div class="details">
+                  <h3><a href="detalhes-palestrante/?palestrante={{ palestrante.imagem }}">{{ palestrante.nome }}</a></h3>
+                  <br>
+                  <!-- <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div> -->
                 </div>
               </div>
             </div>
+            {% endfor %}
           </div>
-        </div>
+
       </div>
 
     </section>
@@ -273,9 +248,6 @@
                 <h4>GT – 3 Moda, Criação e Sustentabilidade</h4>
               </div>
             </div>
-            
-            
-            
             
           </div>
           <!-- End Schdule Day 2 -->
@@ -631,7 +603,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <form method="POST" action="#">
+              <form method="POST" action="inscricao">
                 <div class="form-group">
                   <input type="text" class="form-control" name="nome" placeholder="Nome">
                 </div>
@@ -654,10 +626,15 @@
                   </select>
                 </div>
                 <div class="form-group">
-                  <select id="minicurso" name="minicurso" class="form-control" >
-                    <option value="">Minicurso</option>
-                    <option value="estudante-graduacao">Estudante Graduação</option>
-                  </select>
+                  <soan>Minicursos</span>
+                  {% for minicurso in minicursos %}
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="{{ minicurso.nome }}" onclick="verificarHorarios()">
+                      <label class="form-check-label" for="{{ minicurso.nome }}">{{ minicurso.nome }}</label>
+                      <br>
+                      <small id="{{ minicurso.dias }};{{ minicurso.horarios }}">Dias: {{ minicurso.dias }}; Horários: {{ minicurso.horarios }}</small>
+                    </div>
+                  {% endfor %}
                 </div>
                 <div class="text-center">
                   <button type="submit" class="btn">Inscrever-se</button>
@@ -739,5 +716,33 @@
     </section><!-- #contact -->
 
   </main>
+
+  <script>
+    function verificarHorarios() {
+      let caixas = Object.values(document.getElementsByClassName('form-check-input'));
+
+      caixas.map((caixa) => {
+        if(caixa.checked) {
+          let diasHorarios = caixa.parentElement.children[3].id;
+          let dias = diasHorarios.split(';')[0].split(',');
+          let horarios = diasHorarios.split(';')[1].split('-');
+
+          dias.map((dia) => {
+            horarios.map((horario) => {
+              caixas.map((c) => {
+                console.log(c.parentElement.children[3].id);
+                let d = c.parentElement.children[3].id.split(';')[0];
+                let h = c.parentElement.children[3].id.split(';')[1];
+
+                if((caixa.id != c.id) && (d.includes(dia) && h.includes(horario))) {
+                  c.disabled = true;
+                }
+              });
+            });
+          });
+        }
+      });
+    }
+  </script>
 
 {% endblock %}

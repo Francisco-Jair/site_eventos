@@ -37,9 +37,39 @@
   ======================================================= -->
 </head>
 
-{% block content %}
+<body>
 
-{% endblock %}
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header" class="header-fixed">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
+        <a href="index.html#intro" class="scrollto"><img src="img/logo.png" alt="" title=""></a>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">          
+          <li class="menu-active"><a href="/#intro">Início</a></li>
+          <li><a href="/#about">Sobre</a></li>
+          <li><a href="/#speakers">Palestrantes</a></li>
+          <li><a href="/#schedule">Programação</a></li>
+          <li><a href="/#faq">Trabalhos</a></li>
+          <li><a href="/#contact">Contato</a></li>
+          <li class="buy-tickets"><a href="/#buy-tickets">Inscrição</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <main id="main" class="main-page">
+
+  {% block content %}
+
+  {% endblock %}
 
   <!--==========================
     Footer
