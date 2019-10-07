@@ -42,7 +42,7 @@ def inscricao(request):
 
             usuario.save()
 
-            dados = {'palestrantes': palestrantes, 'minicursos': minicursos, 'mensagem': 'Usuário cadastrado com sucesso.'}
+            dados = {'palestrantes': palestrantes, 'minicursos': minicursos, 'mensagem': 'Inscrição cadastrada com sucesso.'}
 
             return render(request, 'index.html', dados)
     except:
