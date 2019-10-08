@@ -162,6 +162,13 @@
               <div class="col-md-10">
                 <h4>Credenciamento</h4>
                 <p>A partir das 9:00</p>
+                <br>
+                <h4>Mini curso:</h4>
+                <br>
+                <h4>1. Workshop de desenho de moda - Ilustração de Moda: Do Sketch ao Croqui!</h4>
+                <p>Olivia Matos</p>
+                <p>Vagas: 15</p>
+                <p>Horário: 09:00 às 12:00</p>
               </div>
             </div>
 
@@ -172,6 +179,13 @@
                 <br>
                 <h4>PROGRAMAÇÃO INTERNA</h4>
                 <p>EMPMODA/Prof. MSc. Tarcísio D’almeida – “A Moda como Campo do Conhecimento” - UFMG</p>
+                <br>
+                <h4>Mini curso:</h4>
+                <br>
+                <h4>1. Workshop de desenho de moda - Ilustração de Moda: Do Sketch ao Croqui!</h4>
+                <p>Olivia Matos</p>
+                <p>Vagas: 15</p>
+                <p>Horário: 14:00 às 17:00</p>
               </div>
             </div>
 
@@ -209,6 +223,11 @@
                 <h4>3. Mini curso: “A Moda como Campo do Conhecimento”</h4>
                 <p>Profº Dr. Tarcisio D’Almeida</p>
                 <p>Vagas: 40</p>
+                <br>
+                <h4>4. Workshop de desenho de moda - Ilustração de Moda: Do Sketch ao Croqui!</h4>
+                <p>Olivia Matos</p>
+                <p>Vagas: 15</p>
+                <p>Horário: 09:00 às 12:00</p>
               </div>
             </div>
             
@@ -237,6 +256,13 @@
                 <p>Olivia Matos</p>
                 <p>Vagas: 15</p>
                 <p>Horário:14:00 as 18:00</p>
+                <br>
+                <h4>Mini curso:</h4>
+                <br>
+                <h4>1. Workshop de desenho de moda - Ilustração de Moda: Do Sketch ao Croqui!</h4>
+                <p>Olivia Matos</p>
+                <p>Vagas: 15</p>
+                <p>Horário: 14:00 às 17:00</p>
               </div>
             </div>
 
@@ -640,7 +666,8 @@
                       <input type="checkbox" class="form-check-input" id="{{ minicurso.nome }}" name="cursos" value="{{ minicurso.nome }}" onclick="verificarHorarios()">
                       <label class="form-check-label" for="{{ minicurso.nome }}">{{ minicurso.nome }}</label>
                       <br>
-                      <small id="{{ minicurso.dias }};{{ minicurso.horarios }}">Dias: {{ minicurso.dias }}; Horários: {{ minicurso.horarios }}; Vagas Disponíveis: {{ minicurso.vagas_disponiveis }}</small>
+                      <small id="{{ minicurso.dias }};{{ minicurso.horarios }}">Dias: {{ minicurso.dias }}; <br>Horários: {{ minicurso.horarios }}; <br>Vagas Disponíveis: {{ minicurso.vagas_disponiveis }}; <br></small>
+                      <small>{{ minicurso.observacoes }}</small>
                     </div>
                   {% endfor %}
                 </div>
