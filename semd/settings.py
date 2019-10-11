@@ -25,7 +25,7 @@ SECRET_KEY = 'f5v^px0h4ee1hx+gt=08kvh0*-tede6dd_!&l1ek)+%@!yy_@@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['semd.ufpi.br', 'www.semd.ufpi.br' 'localhost']
+ALLOWED_HOSTS = ['semd.ufpi.br', 'www.semd.ufpi.br', 'localhost']
 
 
 # Application definition

@@ -15,8 +15,6 @@ def detalhes_palestrante(request):
         palestrante = Palestrantes.objects.filter(imagem=request.GET.get('palestrante')).first()
         dados = {'palestrante': palestrante}
 
-        print(dados)
-
         return render(request, 'speaker-details.html', dados)
     except:
         return redirect('')
