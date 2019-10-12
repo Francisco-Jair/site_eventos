@@ -4,7 +4,7 @@ from .models import Palestrantes, Minicursos, Usuarios
 
 def index(request):
     palestrantes = Palestrantes.objects.all()
-    minicursos = Minicursos.objects.exclude(vagas_disponiveis=0)
+    minicursos = Minicursos.objects.exclude(vagas_disponiveis__lte=0)
 
     dados = {'palestrantes': palestrantes, 'minicursos': minicursos}
 
@@ -35,8 +35,11 @@ def inscricao(request):
             for curso in dict(request.POST)['cursos']:
                 c = Minicursos.objects.get(nome=curso)
                 usuario.minicurso.add(Minicursos.objects.get(nome=curso))
-                c.vagas_disponiveis -= 1
-                c.save()
+                if(c.vagas_disponiveis > 0):
+                    c.vagas_disponiveis -= 1
+                    c.save()
+                else:
+                    raise Exception
 
             usuario.save()
 
