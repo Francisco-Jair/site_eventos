@@ -42,10 +42,15 @@ def inscricao(request):
                     raise Exception
 
             usuario.save()
-
+            
             dados = {'palestrantes': palestrantes, 'minicursos': minicursos, 'mensagem': 'Inscrição cadastrada com sucesso.'}
 
             return render(request, 'index.html', dados)
+
+    except KeyError:
+        dados = {'palestrantes': palestrantes, 'minicursos': minicursos, 'mensagem': 'Inscrição cadastrada com sucesso.'}
+
+        return render(request, 'index.html', dados)
     except:
         dados = {'palestrantes': palestrantes, 'minicursos': minicursos, 'mensagem': 'Não foi possível concluir sua inscrição. Por favor, tente novamente.'}
 
