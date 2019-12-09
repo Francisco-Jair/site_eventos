@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'f5v^px0h4ee1hx+gt=08kvh0*-tede6dd_!&l1ek)+%@!yy_@@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['semd.ufpi.br', 'www.semd.ufpi.br', 'localhost']
 
@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'semd.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'semd',
+        'USER': 'semd',
+        'PASSWORD': '5mG!4Is#',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
