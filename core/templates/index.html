@@ -15,8 +15,8 @@
   ============================-->
   <section id="intro">
     <div class="intro-container wow fadeIn">
-      <h1 class="mb-4 pb-0">III Semana de Estudos em Moda e Design <br><span>III SEMD</span></h1>
-      <p class="mb-4 pb-0">De 11 a 14 de Novembro, Prédio da Moda, Universidade Federal do Piauí</p>
+      <h1 class="mb-4 pb-0">II Simpósio Nordestino de Mídias Digitais para Educação<br>Seminário Regional UNIREDE Nordeste 2021<br><span>Educação a Distância a partir da pandemia do Covid19: formas novas de ensinar e aprender</span></h1>
+      <p class="mb-4 pb-0">23 e 24 de Setembro, Online</p>
       <a href="#about" class="about-btn scrollto">Sobre o Evento</a>
     </div>
   </section>
@@ -108,7 +108,7 @@
               {% for palestrante in palestrantes %}
             <div class="col-lg-4 col-md-6">
               <div class="speaker">
-                <img src="{% static palestrante.imagem %}" alt="{{ palestrante.nome }}" class="img-fluid" style="height: 100%; width: 100%; object-fit: contain">
+                <img src="{{ palestrante.imagem }}" alt="{{ palestrante.nome }}" class="img-fluid" style="height: 100%; width: 100%; object-fit: contain">
                 <div class="details">
                   <h3><a href="detalhes-palestrante/?palestrante={{ palestrante.imagem }}">{{ palestrante.nome }}</a></h3>
                   <br>
@@ -139,16 +139,10 @@
 
         <ul class="nav nav-tabs" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" href="#day-1" role="tab" data-toggle="tab">Segunda, 11</a>
+            <a class="nav-link active" href="#day-1" role="tab" data-toggle="tab">Quinta, 23</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#day-2" role="tab" data-toggle="tab">Terça, 12</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#day-3" role="tab" data-toggle="tab">Quarta, 13</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mt-2" href="#day-4" role="tab" data-toggle="tab">Quinta, 14</a>
+            <a class="nav-link" href="#day-2" role="tab" data-toggle="tab">Sexta, 24</a>
           </li>
         </ul>
 
@@ -158,46 +152,57 @@
           <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>09:00 às 12:00</time></div>
+              <div class="col-md-2"><time>9h às 10h</time></div>
               <div class="col-md-10">
-                <h4>Credenciamento</h4>
-                <p>A partir das 9:00</p>
+                <h4>Abertura</h4>
                 <br>
-                <h4>Mini curso:</h4>
-                <br>
-                <h4>1. Workshop de desenho de moda - Ilustração de Moda: Do Sketch ao Croqui!</h4>
-                <p>Olivia Matos</p>
-                <p>Vagas: 15</p>
-                <p>Horário: 09:00 às 12:00</p>
+                <h4>Participantes</h4>
+                <p>Gildásio Guedes Fernandes (UFPI)</p>
+                <p>Alexandre Martins dos Anjos (UNIREDE)</p>
+                <p>Lívia Nery (CEAD/UFPI)</p>
+                <p>Reitor UESPI</p>
+                <p>Reitor IFPI</p>
               </div>
             </div>
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>14:00 às 18:00</time></div>
+              <div class="col-md-2"><time>10h às 11h30min</time></div>
               <div class="col-md-10">
-                <h4>Credenciamento</h4>
+                <h4>Palestra</h4>
+                <p>Experiências com o programa de mobilidade acadêmica virtual discente UniRede e expectativas futuras</p>
                 <br>
-                <h4>PROGRAMAÇÃO INTERNA</h4>
-                <p>EMPMODA/Prof. Dr. Tarcísio D’almeida – “A Moda como Campo do Conhecimento” - UFMG</p>
+                <h4>Participantes</h4>
+                <p>Alexandre Martins (Unirede)</p>
                 <br>
-                <h4>Mini curso:</h4>
-                <br>
-                <h4>1. Workshop de desenho de moda - Ilustração de Moda: Do Sketch ao Croqui!</h4>
-                <p>Olivia Matos</p>
-                <p>Vagas: 15</p>
-                <p>Horário: 14:00 às 17:00</p>
+                <h4>Mediador</h4>
+                <p>Lívia Nery</p>
               </div>
             </div>
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>18:30 às 21:30</time></div>
+              <div class="col-md-2"><time>14h às 15h</time></div>
               <div class="col-md-10">
-                <h4>Credenciamento</h4>
+                <h4>Palestra</h4>
+                <p>Competências digitais (a confirmar o título)</p>
                 <br>
-                <h4>ABERTURA OFICIAL</h4>
-                <p>Conferência de Abertura: Moda e Humanidades: Fronteiras entre o Pensar, o Inspirar, o Criar" <br>Prof. Dr. Tarcísio D’almeida – UFMG</p>
+                <h4>Participantes</h4>
+                <p>Andreia Inamorato</p>
+                <span>Joint Research Centre European Commission</span>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>15h às 16h30min</time></div>
+              <div class="col-md-10">
+                <h4>Mesa de Debates 1</h4>
+                <p>Educação a Distância a partir da pandemia do Covid19: formas novas de ensinar e aprender</p>
                 <br>
-                <h4>LANÇAMENTO DE LIVROS</h4>
+                <h4>Participantes</h4>
+                <p>Leomá Matos (UFPI)</p>
+                <p>Tânia Cristina (UFRN)</p>
+                <br>
+                <h4>Mediador</h4>
+                <p>Vanderlei Carneiro</p>
               </div>
             </div>
             
@@ -208,226 +213,55 @@
           <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>09:00 às 12:00</time></div>
+              <div class="col-md-2"><time>9h às 10h30min</time></div>
               <div class="col-md-10">
-                <h4>Credenciamento</h4>
+                <h4>Oficina 1: Educação pelo Zoom</h4>
+                <p>Como configurar, organizar conteúdo e transmitir eventos em educação utilizando os recursos da plataforma zoom</p>
                 <br>
-                <h4>1. Mini curso: Artesanato, processo criativo e design: questões sociológicas</h4>
-                <p>Profª Dra. Maria Dione Carvalho de Morais e Ms. Carol Barbosa</p>
-                <p>Vagas: 20</p>
-                <br>
-                <h4>2. Mini curso: Design de calçados.</h4>
-                <p>Profº Dr. Clecio Lacerda.</p>
-                <p>Vagas: 15</p>
-                <br>
-                <h4>3. Mini curso: “A Moda como Campo do Conhecimento”</h4>
-                <p>Profº Dr. Tarcísio D’Almeida</p>
-                <p>Vagas: 40</p>
-                <br>
-                <h4>4. Workshop de desenho de moda - Ilustração de Moda: Do Sketch ao Croqui!</h4>
-                <p>Olivia Matos</p>
-                <p>Vagas: 15</p>
-                <p>Horário: 09:00 às 12:00</p>
-              </div>
-            </div>
-            
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>14:00 às 18:00</time></div>
-              <div class="col-md-10">
-                <h4>Credenciamento</h4>
-                <br>
-                <h4>Conferências:</h4>
-                <br>
-                <h4>1. Cultura, moda e design em perspectiva sociológica.</h4>
-                <p>Prof.ª Dra. Maria Dione Carvalho de Moraes.</p>
-                <p>Horário: 14:00</p>
-                <br>
-                <h4>2 – De gorda a Plus Size: a moda do tamanho. grande.</h4>
-                <p>Profª Dra. Aliana Aires.</p>
-                <p>Horário: 14:00</p>
-                <br>
-                <h4>3 -  Planejamento de carreira na área de moda.</h4>
-                <p>Profº Me. Claudia Cyléia (IFPI)</p>
-                <p>Horário: 16:00</p>
-                <br>
-                <h4>Mini curso:</h4>
-                <br>
-                <h4>1. Workshop de desenho de moda.</h4>
-                <p>Olivia Matos</p>
-                <p>Vagas: 15</p>
-                <p>Horário:14:00 as 18:00</p>
-                <br>
-                <h4>Mini curso:</h4>
-                <br>
-                <h4>1. Workshop de desenho de moda - Ilustração de Moda: Do Sketch ao Croqui!</h4>
-                <p>Olivia Matos</p>
-                <p>Vagas: 15</p>
-                <p>Horário: 14:00 às 17:00</p>
+                <h4>Participantes</h4>
+                <p>Marcos Savio</p>
+                <span>Especialista em gestão educacional em redes </span>
               </div>
             </div>
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>18:30 às 21:30</time></div>
+              <div class="col-md-2"><time>10h30min às 12h</time></div>
               <div class="col-md-10">
-                <h4>Credenciamento</h4>
+                <h4>Oficina 2: Otimização do uso e especificidades em plataformas de videoconferência (Meet e StreamYard)</h4>
+                <p>Diferenças e aplicações de cada plataforma conforme o objetivo da atividade/evento, integração com redes sociais e dicas de otimização dos recursos disponíveis em cada uma.</p>
                 <br>
-                <h4>GT – 1 Moda, Comunicação e Consumo</h4>
+                <h4>Participantes</h4>
+                <p>Prof. Dr. Cledinaldo Leal</p>
+                <p>Prof. Dr. Eliesé Rodrigues</p>
+                <span>Capacitadores de recursos e tecnologias virtuais (TDIC) - CEAD/UFPI</span>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>15h às 16h30min</time></div>
+              <div class="col-md-10">
+                <h4>Oficina 3: Produção de vídeo-aulas</h4>
                 <br>
-                <h4>GT – 2 Moda, Cultura e patrimônio</h4>
+                <h4>Participantes</h4>
+                <p>Jonathan Martins (CEAD/UFPI)</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>16h30min às 18h</time></div>
+              <div class="col-md-10">
+                <h4>Oficina 4: Recursos educacionais digitais e acessibilidade</h4>
                 <br>
-                <h4>GT – 3 Moda, Criação e Sustentabilidade</h4>
+                <h4>Participantes</h4>
+                <p>Bruna Salton (IFRS)</p>
+                <br>
+                <h4>Mediador</h4>
+                <p>Claudete Silva (IFPI)</p>
               </div>
             </div>
             
           </div>
           <!-- End Schdule Day 2 -->
-
-          <!-- Schdule Day 3 -->
-          <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-3">
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>09:00 às 12:00</time></div>
-              <div class="col-md-10">
-                <h4>Credenciamento</h4>
-                <br>
-                <h4>1. Crochet Transcendental</h4>
-                <p>Lise Mariane.</p>
-                <p>A partir das 9:00</p>
-                <p>Livre</p>
-                <br>
-                <h4>2. Mini curso: Artesanato, processo criativo e design: questões sociológicas</h4>
-                <p>Profª Dra. Maria Dione Carvalho de Morais e Me. Carol Barbosa</p>
-                <p>Vagas: 20</p>
-                <br>
-                <h4>3. Mini Curso: Conservação preventiva de têxteis.</h4>
-                <p>Profº Me. Ascânio Wanderley</p>
-                <p>Vagas 15 </p>
-                <br>
-                <h4>4. Mini Curso: Design de calçados.</h4>
-                <p>Profº Dr. Clécio Lacerda.</p>
-                <p>Vagas: 15 </p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>14:00 às 18:00</time></div>
-              <div class="col-md-10">
-                <h4>Credenciamento</h4>
-                <br>
-                <h4>Conferências:</h4>
-                <br>
-                <h4>1. Calça jeans feminina: expressão estética da moda popular brasileira.</h4>
-                <p>Profª Me. Iara Braga</p>
-                <p>Horário - 14:00</p>
-                <br>
-                <h4>2 - Percurso metodológico de uma pesquisa sobre adequação de vestuário para idosas dependentes.</h4>
-                <p>Profª Dra. Artemísia Caldas</p>
-                <p>Horário: 16:00</p>
-                <br>
-                <h4>3 - Entre botas e capas: os uniformes de super-heróis.</h4>
-                <p>Profº Me. Cícero de Brito</p>
-                <p>Horário: 16:00</p>
-                <br>
-                <h4>Oficina: Noções básicas para criação de figurino.</h4>
-                <p>Profª Esp. Katia Ferraz</p>
-                <p>Vagas: 15</p>
-                <p>Horário: 14:00 às 18:00</p>
-                <br>
-                <h4>Mini curso: 1. Workshop de desenho de moda.</h4>
-                <p>Olivia Matos</p>
-                <p>Vagas: 15</p>
-                <p>Horário:14:00 às 18:00</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>18:30 às 21:30</time></div>
-              <div class="col-md-10">
-                <h4>GT – 4 Moda, Tecnologia e processos produtivos.</h4>
-                <br>
-                <h4>GT – 5 Moda, Cinema e figurino.</h4>
-                <br>
-                <h4>Conferencia: Mercado Pirata</h4>
-                <p>Profº Dr. Humberto Lopes</p>
-                <p>Horário: 19:00</p>
-              </div>
-            </div>
-
-          </div>
-          <!-- End Schdule Day 3 -->
-
-          <!-- Schdule Day 4 -->
-          <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-4">
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>09:00 às 12:00</time></div>
-              <div class="col-md-10">
-                <h4>1. Crochet Transcendental</h4>
-                <p>Lise Mariane.</p>
-                <p>A partir das 9:00</p>
-                <p>Livre</p>
-                <br>
-                <h4>2. Mini curso: Modelagem de  BODY SHORT.</h4>
-                <p>Prof. Esp. Antônio Pinto</p>
-                <p>Vagas: 12</p>
-                <p>Horário: 9:00 às 12:00</p>
-                <br>
-                <h4>3. Mini curso: Design de calçados.</h4>
-                <p>Profº Dr. Clecio Lacerda.</p>
-                <p>Vagas: 15</p>
-                <p>Horário: 9:00 às 12:00</p>
-                <br>
-                <h4>4. Palestra: Mitos e verdades sobre a formação em design de moda.</h4>
-                <p>Sarah de Paula e Glay Glenda.</p>
-                <p>Horário: 10:00</p>
-              </div>
-            </div>
-            
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>14:00 às 18:00</time></div>
-              <div class="col-md-10">
-                <h4>Conferências:</h4>
-                <br>
-                <h4>1. Desenvolvimento de eco produtos com base em materiais fibrosos.</h4>
-                <p>Prof. Dr. Jefferson Mendes.</p>
-                <p>Horário - 14:00</p>
-                <br>
-                <h4>2. Patrimônio e sua interface com a moda.</h4>
-                <p>Profª Me. Gizela Falcão</p>
-                <p>Horário: 16:00</p>
-                <br>
-                <h4>3 – Fashion Revolucion – Por uma moda ética e transparente.</h4>
-                <p>Prof. Esp. Manuel Teles</p>
-                <p>Horário: 16:00</p>
-                <br>
-                <h4>Mini cursos:</h4>
-                <br>
-                <h4>1. Modelagem de body short.</h4>
-                <p>Prof. Esp. Antônio Pinto</p>
-                <p>Vagas: 15</p>
-                <p>Horário: 14:00 às 18:00</p>
-                <br>
-                <h4>2. Consultoria de imagem e coloração pessoal.</h4>
-                <p>Profª Me. Juliana Pessoa.</p>
-                <p>Vagas: 10.</p>
-                <p>Horário: 14:00 às 18:00</p>
-              </div>
-            </div>             
-            
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>18:30 às 21:30</time></div>
-              <div class="col-md-10">
-                <h4>MESA DE ENCERRAMENTO DO EVENTO.</h4>
-                <p>TEMA: Design Inclusivo</p>
-                <p>PARTICIPANTES: Prof. Esp. Antônio Pinto E Profº Dr. Clécio Lacerda</p>
-                <p>Mediadora: Profª Me. Maria de Jesus Farias</p>
-                <br>
-                <h4>Encerramento</h4>
-              </div>
-            </div>
-
-          </div>
-          <!-- End Schdule Day 4 -->
 
         </div>
 
@@ -567,7 +401,7 @@
                 <h6 class="card-price text-center">R$ 30,00</h6>
                 <hr>
                 <div class="text-center">
-                  <button type="button" class="btn">Inscrição Encerrada</button>
+                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="standard-access" onclick="verificarHorarios()">Inscreva-se</button>
                 </div>
               </div>
             </div>
@@ -579,48 +413,8 @@
                 <h6 class="card-price text-center">R$ 60,00</h6>
                 <hr>
                 <div class="text-center">
-                  <button type="button" class="btn">Inscrição Encerrada</button>
+                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="standard-access" onclick="verificarHorarios()">Inscreva-se</button>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <br>
-        <br>
-        <br>
-
-        <div class="section-header">
-          <h2>Pagamento</h2>
-          <p>Após a inscrição o pagamento pode ser feito por meio dos métodos a seguir.</p>
-          <p>O comprovante de pagamento deve ser enviado para o e-mail: <a href="mailto:modejunior01@gmail.com">modejunior01@gmail.com</a>.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="card mb-5 mb-lg-0">
-              <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">Transferência Bancária</h5>
-                <hr>
-                <ul class="fa-ul">
-                  <li>Banco do Brasil</li>
-                  <li>Agência: 1122-3</li>
-                  <li>Conta: 21205-9</li>
-                  <li>Variação:51</li>
-                  <li>Conta poupança em nome de Lara Beatriz de Azevêdo Neiva</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="card mb-5 mb-lg-0">
-              <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">Cartão de Crédito/Débito</h5>
-                <hr>
-                <ul class="fa-ul">
-                  <li>Empresa Junior do Curso de Moda, Design e Estilismo no horário de 14:00 às 19:00 hrs.</li>
-                  <li style="text-align: center;"><a href="">PAGAMENTO COM CARTÃO DE CRÉDITO INDISPONÍVEL</a></li>
-                </ul>
               </div>
             </div>
           </div>
