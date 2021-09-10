@@ -27,7 +27,7 @@ SECRET_KEY = 'f5v^px0h4ee1hx+gt=08kvh0*-tede6dd_!&l1ek)+%@!yy_@@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['semd.ufpi.br', 'www.semd.ufpi.br', 'localhost']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -128,8 +128,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
-MEDIA_ROOT = '/media/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'media')
 
 django_heroku.settings(locals())
