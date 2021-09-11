@@ -131,3 +131,6 @@ STATIC_URL = '/static/'
 STATIC_ROOT = '/var/www/html/semd/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = '/var/www/html/semd/media/'
+
+# Send email backend
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
