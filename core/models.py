@@ -83,7 +83,13 @@ class Emails(models.Model):
 
         destinatarios = Usuarios.objects.values_list('email', flat=True)
 
-        enviar_email(assunto=self.assunto, mensagem=self.mensagem, destinatarios=destinatarios)
+        destinatarios_1 = destinatarios[:400]
+        destinatarios_2 = destinatarios[400:]
+
+        print(destinatarios, destinatarios_1, destinatarios_2)
+
+        enviar_email(assunto=self.assunto, mensagem=self.mensagem, destinatarios=destinatarios_1)
+        enviar_email(assunto=self.assunto, mensagem=self.mensagem, destinatarios=destinatarios_2)
 
 class Ajustes(models.Model):
     inscricoes_ativas = models.BooleanField(default=True)
