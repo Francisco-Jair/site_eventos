@@ -88,6 +88,8 @@
               <div class="col-md-2"><time>8h30min às 9h30min</time></div>
               <div class="col-md-10">
                 <h4>Abertura</h4>
+                <a href="https://youtu.be/Obl0RQssOOk" target="_blank" style="color: blue; font-weight: bold;">Acesse</a>
+                <br>
                 <br>
                 <p>Gildásio Guedes Fernandes - Reitor da UFPI</p>
                 <p>Alexandre Martins dos Anjos – Presidente da UNIREDE</p>
@@ -101,6 +103,9 @@
               <div class="col-md-2"><time>9h30min às 10h30min</time></div>
               <div class="col-md-10">
                 <h4>Palestra</h4>
+                <a href="https://youtu.be/Obl0RQssOOk" target="_blank" style="color: blue; font-weight: bold;">Acesse</a>
+                <br>
+                <br>
                 <p>Experiências com o programa de mobilidade acadêmica virtual discente UniRede e expectativas futuras</p>
                 <br>
                 <p>Prof. Dr. Alexandre Martins dos Anjos – UNIREDE</p>
@@ -113,6 +118,9 @@
               <div class="col-md-2"><time>10h30min às 11h30min</time></div>
               <div class="col-md-10">
                 <h4>Palestra</h4>
+                <a href="https://youtu.be/_4DJmljReUQ" target="_blank" style="color: blue; font-weight: bold;">Acesse</a>
+                <br>
+                <br>
                 <p>Tecnologias e Competências Digitais no Ensino Superior: desafios permanentes na prática docente </p>
                 <br>
                 <p>Profa. Dra. Fernanda Chocron Miranda – UFPA</p>
@@ -125,6 +133,9 @@
               <div class="col-md-2"><time>15h às 16h</time></div>
               <div class="col-md-10">
                 <h4>Palestra</h4>
+                <a href="https://youtu.be/c6A5nE96zxc" target="_blank" style="color: blue; font-weight: bold;">Acesse</a>
+                <br>
+                <br>
                 <p>A autorreflexão como ferramenta na formação de políticas institucionais em competências digitais</p>
                 <br>
                 <p>Profa. Dra. Andreia Inamorato</p>
@@ -138,6 +149,9 @@
               <div class="col-md-2"><time>16h às 17h30min</time></div>
               <div class="col-md-10">
                 <h4>Mesa de Debates</h4>
+                <a href="https://youtu.be/h3-vkja2S6Y" target="_blank" style="color: blue; font-weight: bold;">Acesse</a>
+                <br>
+                <br>
                 <p>Educação a Distância a partir da pandemia da Covid19: formas novas de ensinar e aprender</p>
                 <br>
                 <p>Prof. Dr. Eliesé Rodrigues – CEAD/UFPI</p>
@@ -158,6 +172,9 @@
               <div class="col-md-2"><time>9h às 10h30min</time></div>
               <div class="col-md-10">
                 <h4>Oficina 1: Educação pelo Zoom</h4>
+                <a href="https://youtu.be/E3UdZNRi1yU" target="_blank" style="color: blue; font-weight: bold;">Acesse</a>
+                <br>
+                <br>
                 <p>Como configurar, organizar conteúdo e transmitir eventos em educação utilizando os recursos da plataforma zoom</p>
                 <br>
                 <p>Marcos Savio</p>
@@ -171,6 +188,9 @@
               <div class="col-md-2"><time>10h30min às 12h</time></div>
               <div class="col-md-10">
                 <h4>Oficina 2: Otimização do uso e especificidades em plataformas de videoconferência (Meet e StreamYard)</h4>
+                <a href="https://youtu.be/U9_7O_eDCfs" target="_blank" style="color: blue; font-weight: bold;">Acesse</a>
+                <br>
+                <br>
                 <p>Diferenças e aplicações de cada plataforma conforme o objetivo da atividade/evento, integração com redes sociais e dicas de otimização dos recursos disponíveis em cada uma.</p>
                 <br>
                 <p>Prof. Dr. Cledinaldo Leal</p>
@@ -185,6 +205,8 @@
               <div class="col-md-2"><time>14h30min às 16h</time></div>
               <div class="col-md-10">
                 <h4>Oficina 3: Recursos educacionais digitais e acessibilidade</h4>
+                <a href="https://youtu.be/d5xbzZtd2jg" target="_blank" style="color: blue; font-weight: bold;">Acesse</a>
+                <br>
                 <br>
                 <p>Lael Nervis</p>
                 <span>Técnico de Tecnologia da Informação</span>
@@ -199,6 +221,9 @@
               <div class="col-md-2"><time>16h às 17h30min</time></div>
               <div class="col-md-10">
                 <h4>Oficina 4: Aspectos práticos para produção de vídeo aulas para não especialistas</h4>
+                <a href="https://youtu.be/uYv7FhajRz4" target="_blank" style="color: blue; font-weight: bold;">Acesse</a>
+                <br>
+                <br>
                 <p>Esta oficina tem o propósito de oferecer um contato com ferramentas para produção de vídeo aulas de maneira simples e objetiva. Buscaremos mostrar algumas ferramentas simples de gravação utilizando um telefone celular ou um computador para gravação de áudio e vídeo, tentando minimizar etapas de edição. Outro ponto importante em uma vídeo aula é a melhoria na qualidade do áudio. Mostraremos algumas opções e sugestões de programas e equipamentos para que o professor possa produzir suas aulas sozinho e com qualidade aceitável.</p>
                 <br>
                 <p>Prof. Dr. Jonathan Martins – CEAD/UFPI</p>
@@ -283,7 +308,11 @@
                 </h5>
                 <hr>
                 <div class="text-center">
-                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="standard-access">Inscreva-se</button>
+                  {% if ajustes.inscricoes_ativas %}
+                    <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="standard-access">Inscreva-se</button>
+                  {% else %}
+                    <strong>INSCRIÇÕES ENCERRADAS</strong>
+                  {% endif %}
                 </div>
               </div>
             </div>
@@ -292,54 +321,56 @@
 
       </div>
 
-      <!-- Modal Order Form -->
-      <div id="buy-ticket-modal" class="modal fade">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Inscrição</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form method="POST" action="inscricao">
-                {% csrf_token %}
-                <div class="form-group">
-                  <input type="text" class="form-control" name="nome" placeholder="Nome" required>
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="instituicao" placeholder="Instituição" required>
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="email" placeholder="E-mail" required>
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="cpf" placeholder="CPF" required>
-                </div>
-                <div class="form-group">
-                  <select id="tipo-usuario" name="tipo-usuario" class="form-control" required>
-                    <option value="">Tipo de Usuário</option>
-                    <option value="Estudante Graduação">Estudante Graduação</option>
-                    <option value="Estudante de Pós-Gradução">Estudante de Pós-Gradução</option>
-                    <option value="Docente">Docente</option>
-                    <option value="Outros Profissionais">Outros Profissionais</option>
-                  </select>
-                </div>
-                <!-- <div class="form-group">
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="termos" name="termos" onclick="$('#termos').is(':checked') ? $('#botao-inscricao').removeAttr('disabled') : $('#botao-inscricao').attr('disabled', '')">
-                    <label class="form-check-label" for="termos">Você concorda com todes es termes.</label>
+      {% if ajustes.inscricoes_ativas %}
+        <!-- Modal Order Form -->
+        <div id="buy-ticket-modal" class="modal fade">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Inscrição</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form method="POST" action="inscricao">
+                  {% csrf_token %}
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="nome" placeholder="Nome" required>
                   </div>
-                </div> -->
-                <div class="text-center">
-                  <button type="submit" class="btn" id="botao-inscricao">Inscrever-se</button>
-                </div>
-              </form>
-            </div>
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="instituicao" placeholder="Instituição" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="email" placeholder="E-mail" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="cpf" placeholder="CPF" required>
+                  </div>
+                  <div class="form-group">
+                    <select id="tipo-usuario" name="tipo-usuario" class="form-control" required>
+                      <option value="">Tipo de Usuário</option>
+                      <option value="Estudante Graduação">Estudante Graduação</option>
+                      <option value="Estudante de Pós-Gradução">Estudante de Pós-Gradução</option>
+                      <option value="Docente">Docente</option>
+                      <option value="Outros Profissionais">Outros Profissionais</option>
+                    </select>
+                  </div>
+                  <!-- <div class="form-group">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="termos" name="termos" onclick="$('#termos').is(':checked') ? $('#botao-inscricao').removeAttr('disabled') : $('#botao-inscricao').attr('disabled', '')">
+                      <label class="form-check-label" for="termos">Você concorda com todes es termes.</label>
+                    </div>
+                  </div> -->
+                  <div class="text-center">
+                    <button type="submit" class="btn" id="botao-inscricao">Inscrever-se</button>
+                  </div>
+                </form>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+      {% endif %}
 
     </section>
 

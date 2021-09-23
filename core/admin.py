@@ -1,10 +1,12 @@
 from django.contrib import admin
-from .models import Palestrantes, Minicursos, Usuarios
+from .models import Ajustes, Emails, Palestrantes, Minicursos, Usuarios
 from django.http import HttpResponse
 import xlwt
 
 admin.site.register(Palestrantes)
 admin.site.register(Minicursos)
+admin.site.register(Emails)
+admin.site.register(Ajustes)
 
 def exportar_usuarios(modeladmin, request, queryset):
     response = HttpResponse(content_type='application/ms-excel')
