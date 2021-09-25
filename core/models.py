@@ -1,7 +1,9 @@
 from django.db import models
+from django.core.mail import EmailMessage
 from django.core.mail import send_mail
 from django.conf import settings
 import threading
+import os
 
 def email(assunto, mensagem, remetente, destinatarios):
     send_mail(assunto, mensagem, remetente, destinatarios)
@@ -16,6 +18,24 @@ def enviar_email_registro(usuario):
     destinatarios = [usuario.email]
 
     enviar_email(assunto=assunto, mensagem=mensagem, destinatarios=destinatarios)
+
+def email_certificados(nome, email):
+    email = EmailMessage(
+        'Certificado do II SiNeMIDE',
+        'Body goes here',
+        settings.EMAIL_HOST_USER,
+        [email],
+        reply_to=[settings.EMAIL_HOST_USER],
+    )
+
+    arquivo = os.path.join(settings.BASE_DIR, 'core', 'static', 'certificados', f'{nome}.pdf')
+    
+    email.attach_file(arquivo)
+    email.send()
+
+def enviar_email_certificados(nome, email):
+    thread = threading.Thread(target=email_certificados, args=(nome, email))
+    thread.start()
 
 class Palestrantes(models.Model):
     nome = models.CharField(max_length=255, blank=False, null=False)

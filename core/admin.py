@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Ajustes, Emails, Palestrantes, Minicursos, Usuarios
+from .models import Ajustes, Emails, Palestrantes, Minicursos, Usuarios, enviar_email_certificados
 from django.http import HttpResponse
 import xlwt
 
@@ -34,9 +34,17 @@ def exportar_usuarios(modeladmin, request, queryset):
 
 exportar_usuarios.short_description = 'Exportar Usuários selecionados (planilha)'
 
+def enviar_certificados(modeladmin, request, queryset):
+
+    for usuario in queryset:
+        enviar_email_certificados(usuario.nome.title(), usuario.email)
+
+
+enviar_certificados.short_description = 'Enviar certificados para os Usuários selecionados'
+
 class UsuariosAdmin(admin.ModelAdmin):
     list_display = ['nome', 'cpf', 'email', 'instituicao']
     ordering = ['nome']
-    actions = [exportar_usuarios]
+    actions = [exportar_usuarios, enviar_certificados]
 
 admin.site.register(Usuarios, UsuariosAdmin)
