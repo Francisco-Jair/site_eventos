@@ -16,14 +16,14 @@ body {
 }
 
 a {
-  color: #254531;
+  color: #01230c;
   transition: 0.5s;
 }
 
 a:hover,
 a:active,
 a:focus {
-  color: #f8234a;
+  color: #254531;
   outline: none;
   text-decoration: none;
 }
@@ -43,7 +43,7 @@ h6 {
   font-weight: 400;
   margin: 0 0 20px 0;
   padding: 0;
-  color: #0e1b4d;
+  color: #000000;
 }
 
 .main-page {
@@ -64,7 +64,7 @@ h6 {
   width: 100%;
   height: 100%;
   overflow: visible;
-  background: #fff url("../img/preloader.svg") no-repeat center center;
+  background: #fff;
 }
 
 /* Back to top button */
@@ -89,13 +89,13 @@ h6 {
 }
 
 .back-to-top:focus {
-  background: #e0072f;
+  background: #01230c;
   color: #fff;
   outline: none;
 }
 
 .back-to-top:hover {
-  background: #e0072f;
+  background: #01230c;
   color: #fff;
 }
 
@@ -157,7 +157,7 @@ h6 {
 
 #header.header-scrolled,
 #header.header-fixed {
-  background: rgba(6, 12, 34, 0.98);
+  background: #000000;
   height: 70px;
   padding: 15px 0;
   transition: all 0.5s;
@@ -477,7 +477,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro:before {
   content: "";
-  /* background: rgba(6, 12, 34, 0.8); */
+  background: rgba(255, 255, 255, 0.4);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -709,7 +709,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #speakers .speaker .details {
-  background: rgba(6, 12, 34, 0.76);
+  background: rgba(37, 69, 49, 0.8);
   position: absolute;
   left: 0;
   bottom: -30px;
@@ -816,7 +816,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   border: none;
   border-radius: 50px;
   font-weight: 600;
-  background-color: #0e1b4d;
+  background-color: #000000;
   color: #fff;
   padding: 10px 100px;
 }
@@ -1204,7 +1204,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #subscribe button:hover {
-  background: #e0072f;
+  background: #01230c;
 }
 
 /*--------------------------------------------------------------
@@ -1261,7 +1261,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #buy-tickets .card .btn:hover {
-  background-color: #e0072f;
+  background-color: #01230c;
 }
 
 #buy-tickets #buy-ticket-modal input,
@@ -1280,7 +1280,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #buy-tickets #buy-ticket-modal .btn:hover {
-  background-color: #e0072f;
+  background-color: #01230c;
 }
 
 /*--------------------------------------------------------------
@@ -1384,7 +1384,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #contact .form button[type="submit"]:hover {
-  background: #e0072f;
+  background: #01230c;
 }
 
 /*--------------------------------------------------------------
@@ -1523,7 +1523,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top .footer-newsletter input[type="submit"]:hover {
-  background: #e0072f;
+  background: #01230c;
 }
 
 #footer .copyright {
@@ -1592,7 +1592,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 @media (max-width: 991px) {
   #header {
-    background: rgba(6, 12, 34, 0.98);
+    background: #000000;
     height: 70px;
     padding: 15px 0;
     transition: all 0.5s;
