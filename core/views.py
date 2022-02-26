@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, HttpResponse, get_object_or_404
 from django.views.decorators.csrf import csrf_protect
 from .models import Ajustes, Palestrantes, Minicursos, Usuarios
 
+
 def index(request):
     palestrantes = Palestrantes.objects.all()
     minicursos = Minicursos.objects.exclude(vagas_disponiveis__lte=0)
@@ -10,6 +11,7 @@ def index(request):
     dados = {'palestrantes': palestrantes, 'minicursos': minicursos, 'ajustes': ajustes}
 
     return render(request, 'index.html', dados)
+
 
 def detalhes_palestrante(request):
     try:
@@ -21,6 +23,7 @@ def detalhes_palestrante(request):
         return render(request, 'speaker-details.html', dados)
     except:
         return redirect('')
+
 
 @csrf_protect
 def inscricao(request):
@@ -53,6 +56,7 @@ def inscricao(request):
         dados = {'palestrantes': palestrantes, 'minicursos': minicursos, 'mensagem': 'Não foi possível concluir sua inscrição. Por favor, tente novamente.', 'ajustes': ajustes}
 
         return render(request, 'index.html', dados)
+
 
 def handler404(request, exception):
     response = render(request, '404.html', {})
