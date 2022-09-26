@@ -31,6 +31,7 @@ def inscricao(request):
 
     try:
         if request.method == 'POST':
+
             palestrantes = Palestrantes.objects.all()
             minicursos = Minicursos.objects.exclude(vagas_disponiveis=0)
             
@@ -39,22 +40,23 @@ def inscricao(request):
                 instituicao = request.POST['instituicao'], 
                 email = request.POST['email'],
                 cpf = request.POST['cpf'], 
-                tipo_usuario = request.POST['tipo-usuario']
+                tipo_usuario = request.POST['tipo-usuario'],
+                curso1 = (request.POST.get("curso1") is not None),
+                curso2 = (request.POST.get("curso2") is not None),
+                curso3 = (request.POST.get("curso3") is not None),
+                curso4 = (request.POST.get("curso4") is not None),
+                curso5 = (request.POST.get("curso5") is not None),
             )
-
             usuario.save()
-            
-            dados = {'palestrantes': palestrantes, 'minicursos': minicursos, 'mensagem': 'Inscrição cadastrada com sucesso.', 'ajustes': ajustes}
 
+            dados = {'palestrantes': palestrantes, 'minicursos': minicursos, 'mensagem': 'Inscrição cadastrada com sucesso.', 'ajustes': ajustes}
             return render(request, 'index.html', dados)
 
     except KeyError:
         dados = {'palestrantes': palestrantes, 'minicursos': minicursos, 'mensagem': 'Inscrição cadastrada com sucesso.', 'ajustes': ajustes}
-
         return render(request, 'index.html', dados)
     except:
         dados = {'palestrantes': palestrantes, 'minicursos': minicursos, 'mensagem': 'Não foi possível concluir sua inscrição. Por favor, tente novamente.', 'ajustes': ajustes}
-
         return render(request, 'index.html', dados)
 
 

@@ -1569,7 +1569,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 @media (min-width: 1024px) {
   #intro {
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
   }
 
   #about {
@@ -1665,5 +1665,5 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Style */
 
 .color_text {
-  color: #000 !important;
+  color: rgb(255, 255, 255) !important;
 }
